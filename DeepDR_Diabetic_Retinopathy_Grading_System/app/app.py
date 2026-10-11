@@ -12,7 +12,7 @@ st.set_page_config(page_title="DeepDR: Diabetic Retinopathy", page_icon="👁️
 def load_dr_model():
     current_dir = os.path.dirname(os.path.abspath(__file__))
     model_path = os.path.join(current_dir, '../model/resnet50v2_model.h5')
-    model = load_model(model_path,safe_mode=False)
+    model = load_model(model_path,compile=False, safe_mode=False)
     return model
 
 try:
